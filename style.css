@@ -1,0 +1,712 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body {
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+
+
+
+/* Untuk container */
+.container {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-template-rows: 50px 1fr;
+	grid-template-areas: "header log-out" "sidebar content";
+}
+
+
+
+
+/* Untuk header */
+.header {
+	grid-area: header;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0,146,240,1);
+	color: white;
+}
+.header h1 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+
+
+/* Untuk log-out */
+.log-out {
+	grid-area: log-out;
+	background-image: linear-gradient(90deg, rgba(0,109,240,1) 0%, rgba(0,146,240,1) 0%, rgba(0,212,255,1) 100%);
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	color: white;
+}
+.log-out a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	padding-right: 30px;
+	scroll: pointer;
+}
+.log-out a:hover {
+	color: #FFF0F0;
+}
+
+
+
+
+/* Untuk sidebar */
+.sidebar {
+	grid-area: sidebar;
+	box-sizing: border-box;
+	background-color: white;
+	color: white;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 50px 1fr;
+	grid-template-areas: "foto" "menu";
+}
+.sidebar .foto {
+	grid-area: foto;
+	box-sizing: border-box;
+}
+.sidebar .menu {
+	grid-area: menu;
+	box-sizing: border-box;
+}
+.sidebar .menu ul li a {
+	display: block;
+	text-decoration: none;
+	color: #8d9498;
+	font-family: arial;
+	padding: 20px 20px 20px 30px;
+}
+.sidebar .menu ul li a:hover {
+	color: #006df0;
+	background-color: #ddd;
+}
+.sidebar .menu ul li a i {
+	display: inline-block;
+	padding-right: 30px;
+}
+
+
+
+
+/* Untuk content */
+.content {
+	box-sizing: border-box;
+	grid-area: content;
+	background-color: white;
+	background-color: #f6fafe;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 50px 1fr;
+	grid-template-areas: "judul" "halaman";
+}
+.content .judul {
+	grid-area: judul;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	margin-left: 30px;
+}
+.content .judul h1 {
+	color: #8d9498;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+.content .halaman {
+	grid-area: halaman;
+	box-sizing: border-box;
+	margin: 0 30px 30px 30px;
+	background-color: white;
+	box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 50px 50px 1fr;
+	grid-template-areas: "alert" "navigasi" "table";
+}
+.content .halaman .alert {
+	box-sizing: border-box;
+	background-color: #fff;
+	color: #666;
+	border:2px solid #f5c6cb;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+.content .halaman .alert {
+	box-sizing: border-box;
+	background-color: #f8d7da;
+	color: #721c24;
+	border:2px solid #f5c6cb;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+.content .halaman .success {
+	box-sizing: border-box;
+	background-color: #d4edda;
+	color: #155724;
+	border:2px solid #c3e6cb;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+/* Untuk navigasi */
+.content .halaman .navigasi {
+	grid-area: navigasi;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	align-items: center;
+}
+
+/*untuk input*/
+.content .halaman .navigasi a i {
+	padding-right: 12px;
+}
+.content .halaman .navigasi a {
+	display: inline-block;
+	width: 140px;
+	background-color: #5cb85c;
+	color: white;
+	text-decoration: none;
+	margin-left: 40px;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}
+.content .halaman .navigasi a:hover {
+	background-color: #52a552;
+}
+
+
+/* Untuk pencarian */
+.content .halaman .navigasi form {
+	display: flex;
+	margin-right: 40px;
+	box-sizing: border-box;
+	justify-content: flex-end;
+}
+.content .halaman .navigasi form input[type="text"] {
+	box-sizing: border-box;
+	border: 2px solid #3498db;
+	padding-left: 5px;
+	color: #666;
+	font-size: 16px;
+	width: 250px;
+
+}
+.content .halaman .navigasi form button {
+	border: none;
+	border-radius: 0;
+	box-sizing: border-box;
+	width: 35px;
+	height: 35px;
+	background-color: #3498db;
+	color: #fff;
+	cursor: pointer;
+}
+.content .halaman .navigasi form button:hover {
+	background-color: #2e88c5;
+}
+
+
+.content .halaman .table {
+	grid-area: table;
+	box-sizing: border-box;
+}
+
+
+/* untuk table */
+.content .halaman .table table {
+	box-sizing: border-box;
+	border-collapse: collapse;
+	margin-top: 20px;
+	margin-left: 40px;
+	margin-bottom: 40px;
+	margin-right: 40px;
+}
+.content .halaman .table tr th {
+	color: #fff;
+	font-weight:600;
+	background-color: #3498db;
+	padding: 10px 12px;
+	text-align: center;
+}
+.content .halaman .table table tr:nth-child(odd) {
+	background: #eee;
+}
+.content .halaman .table tr td {
+	text-align: center;
+	padding: 10px 12px;
+	color: #666;
+}
+.container .content .halaman .table tr td a {
+	color: steelblue;
+	text-decoration: none;
+}
+.container .content .halaman .table tr td a:hover {
+	text-decoration: underline;
+}
+
+
+
+/* untuk button delete dan update*/
+.content .halaman .table .update {
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0;
+	margin-right: 16px;
+}
+.content .halaman .table .update button {
+	box-sizing: border-box;
+	background-color: #f0ad4e;
+	padding:0;
+	height: 30px;
+	padding:0 10px;
+	border-radius: none;
+}
+.content .halaman .table .update button i {
+	margin-right: 10px;
+
+}
+.content .halaman .table .update button:hover {
+	background-color: #d89b46;
+}
+.content .halaman .table .update button:focus {
+	outline: none;
+}
+.content .halaman .table .delete {
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0;
+}
+.content .halaman .table .delete button {
+	background-color: #d9534f;
+	padding: 0;
+	height: 30px;
+	padding:0 10px;
+	border-radius: none;
+
+}
+.content .halaman .table .delete button i {
+	margin-right: 10px;
+
+}
+.content .halaman .table .delete button:hover {
+	background-color: #c34a47;
+}
+.content .halaman .table .delete button:focus {
+	outline: none;
+}
+
+
+
+
+/* Untuk form */
+.content .halaman .table form {
+	display: grid;
+	grid-template-columns: 0.8fr 2fr 1fr;
+	grid-template-rows: 1fr;
+	grid-area: "label masukan error";
+	margin-top: 0;
+	margin-bottom: 5%;
+	margin-left: 5%;
+	margin-right: 0;
+	grid-gap: 30px;
+}
+.content .halaman .table form label, input[type="text"], input[type="radio"], input[type="checkbox"], select, option, textarea, button {
+	font-size: 16px; 
+	
+}
+.content .halaman .table form input[type="text"], select, option {
+	height: 26px;
+}
+.content .halaman .table form input[type="text"], textarea, button {
+	border: 1px solid #bbb;
+	border-radius: 5px;
+}
+.content .halaman .table form input[type="text"], textarea {
+	padding-left: 10px;
+	font-family: sans-serif;
+}
+.content .halaman .table form textarea {
+	padding-top: 10px;
+}
+.content .halaman .table form select {
+	margin-right: 20px;
+}
+.content .halaman .table form button {
+	padding: 10px 0;
+	border: none;
+	color: white;
+	background-color: #006df0;
+	cursor: pointer;
+}
+.content .halaman .table form button:hover {
+	background-color: #0057c0;
+}
+.content .halaman .table form label[for="laki-laki"], label[for="sudah-nikah"] {
+	margin-right: 30px;
+}
+.content .halaman .table .form-input {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	color: #006df0;
+}
+
+
+/* Untuk keterangan*/
+.content .halaman .table .error {
+	color: #ff4c4c;
+}
+
+
+
+
+/* Untuk Gambar progress */
+.content .halaman .table .image {
+	box-sizing: border-box;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+
+}
+.content .halaman .table .image img {
+	width: 250px;
+	height: 135px;
+}
+
+.baris-colom {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+}
+
+
+
+/* untuk informasi karyawan */
+.content .halaman .table .informasi-foto {
+	box-sizing: border-box;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 30px;
+}
+.content .halaman .table .informasi-foto .foto {
+	box-sizing: border-box;
+	display: grid;
+	width: 270px;
+	height: 310px;
+}
+.content .halaman .table .informasi-foto .foto h1 {
+	box-sizing: border-box;
+	font-weight: bold;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	color: steelblue;
+	font-size: 22px;
+	height: 49px;
+	display: grid;
+	align-items: center;
+
+}
+.content .halaman .table .informasi-foto .foto img {
+	/*padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;*/
+	height: 270px;
+	width: 220px;
+}
+
+
+
+.content .halaman .table .informasi-keterangan {
+	box-sizing: border-box;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+.content .halaman .table .informasi-keterangan .biodata {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+.content .halaman .table .informasi-keterangan .biodata .nama {
+	box-sizing: border-box;
+	display: grid;
+	align-items: center;
+	background-color: #fff;
+	color: #666;
+	font-size: 18px;
+	padding: 16px;
+	padding-left: 0;
+	font-weight: bold;
+	border-bottom: none;
+}
+.content .halaman .table .informasi-keterangan .biodata .keteragan {
+	box-sizing: border-box;
+	display: grid;
+	align-items: center;
+	background-image: #fff;
+	color: #666;
+	padding: 16px;
+	padding-left: 28px;
+	font-size: 18px;
+	border-bottom: none;
+	border-left: none;
+}
+
+
+.container .content .halaman .table .main-informasi {
+	box-sizing: border-box;
+	display: grid;
+	margin: 0 auto;
+	width: 540px;
+	column-gap: 60px;
+	grid-template-columns: 1fr 1fr;
+}
+
+/* untuk index */
+.container .content .halaman .table .main-informasi .informasi-karyawan {
+	box-sizing: border-box;
+	width: 240px;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	align-items: center;
+}
+.container .content .halaman .table .main-informasi .informasi-karyawan .label {
+	box-sizing: border-box;
+	background-color: #3498db;
+}
+.container .content .halaman .table .main-informasi .informasi-karyawan .label i {
+	color: #fff;
+	font-size: 80px;
+	padding: 20px 20px
+}
+.container .content .halaman .table .main-informasi .informasi-karyawan .value {
+	box-sizing: border-box;
+	border:2px solid #3498db;
+	height: 120px;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: 1fr;
+	grid-template-rows: 80px auto;
+}
+.container .content .halaman .table .main-informasi .informasi-karyawan .value .angka {
+	box-sizing: border-box;
+	font-size: 60px;
+	color: #3498db;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.container .content .halaman .table .main-informasi .informasi-karyawan .value .huruf {
+	box-sizing: border-box;
+	font-size: 20px;
+	color: #3498db;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+/* untuk navigasi halaman */
+.container .content .halaman .table .navigasi-halaman {
+	margin-left: 40px;
+	margin-bottom: 40px;
+	display: flex;
+}
+.container .content .halaman .table .navigasi-halaman h1 {
+	margin-right: : 40px;
+	display: grid;
+	align-items: center;
+}
+.container .content .halaman .table .navigasi-halaman a {
+	display: block;
+	color: steelblue;
+	font-size: 16px;
+	text-decoration: none;
+	padding: 10px;
+	border:1px solid steelblue;
+	border-right: none;
+}
+.container .content .halaman .table .navigasi-halaman a:nth-child(even) {
+	border-right: 1px solid steelblue;
+}
+
+
+/* untuk menampilkan TOTAL absen */
+.container .content .halaman .table .total-absen {
+	padding: 0;
+	margin:0;
+	padding: 5px 10px;
+}
+
+
+/* untuk cetak gaji */
+/* untuk menampilkan TOTAL absen */
+.container .content .halaman .navigasi .cetak-gaji {
+	display: grid;
+	box-sizing: border-box;
+	justify-content:flex-start;
+	margin-left: 40px;
+}
+.container .content .halaman .navigasi .cetak-gaji i {
+	box-sizing: border-box;
+	padding-right: 10px;
+}
+.container .content .halaman .navigasi .cetak-gaji button {
+	box-sizing: border-box;
+	border: none;
+	border-radius: 0;
+	width: 140px;
+	height: 35px;
+	background-color: #3498db;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+}
+
+.container .content .halaman .navigasi .cetak-gaji button:hover {
+	background-color: #2e88c5;
+
+}
+
+
+/* untuk table reponsive */
+
+.container .content .halaman .table .responsive {
+	overflow: auto;
+}
+.container .content .halaman .table .responsive table {
+	width: 120%;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+
+/* untuk table rekap */
+
+.container .content .halaman .table .tanggal-pekerjaan {
+	margin: 40px;
+	margin-top: 20px;
+}
+.container .content .halaman .table .tanggal-pekerjaan form{
+	margin: 0;
+}
+.container .content .halaman .table .tanggal-pekerjaan table{
+	margin: 0;
+	margin-top: 40px;
+	border-collapse: collapse;
+}
+/*.container .content .halaman .table .tanggal-pekerjaan table tr th, td {
+	color: black;
+	font-size: 16px;
+	font-weight: normal;
+	border: 1px solid black;
+	background-color: white;
+}*/
+/*.container .content .halaman .table .tanggal-pekerjaan table tr:nth-child(odd){
+	background-color: #fff;
+}
+*/
+
+/* untuk PDF */
+@media print {
+	.header {
+		display: none;
+	}
+}

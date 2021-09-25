@@ -1,0 +1,155 @@
+* {
+	padding: 0;
+	margin:0;
+	color: #666;
+}
+body {
+	background-image: #fff;
+	font-size: 16px;
+	font-family: sans-serif;
+	background-color: #f6fafe;
+}
+.container {
+	width: 400px;
+	box-sizing: border-box;
+	margin:60px auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 1fr 1fr 1fr 1fr;
+	grid-template-areas: "title" "alert" "content" "footer";
+	background-color: #fff;
+	box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+.container .title {
+	box-sizing: border-box;
+	background-color: #007bff;
+	color: #fff;
+	display: grid;
+	grid-area: title;
+	align-items: center;
+	justify-content: center;
+	padding: 24px 0;
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.container .alert {
+	box-sizing: border-box;
+	display: grid;
+	grid-area: alert;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 0;
+	background-color: #f8d7da;
+	color: #721c24;
+	margin:30px 20px 10px 20px;
+	border: 1px solid #f5c6cb;
+	border-radius: .25rem;
+}
+.container .success {
+	box-sizing: border-box;
+	display: grid;
+	grid-area: alert;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 0;
+	background-color: #d4edda;
+	color: #155724;
+	margin:30px 20px 10px 20px;
+	border: 1px solid #c3e6cb;
+	border-radius: .25rem;
+}
+.container .normal  {
+	box-sizing: border-box;
+	display: grid;
+	grid-area: alert;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 0;
+	background-color: #d4edda;
+	color: #155724;
+	margin:30px 20px 10px 20px;
+	border: 2px solid #c3e6cb;
+	border-radius: .25rem;
+}
+.container .content {
+	display: grid;
+}
+.container .content form {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-row-gap: 26px;
+	padding:20px;
+	justify-content: center;
+	align-items: center;
+}
+.container .content form input[type="text"], input[type="password"], input[type="checkbox"] {
+	font-size: 16px;
+	height: 36px;
+	box-sizing: border-box;
+}
+.container .content form label {
+	display: grid;
+	align-items: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+.container .content form input[type="text"], input[type="password"] {
+	padding-left: 8px;
+	border: 1px solid #007bff;
+	display: grid;
+	align-items: center;
+}
+.container .content form button {
+	font-size: 16px;
+	height: 36px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	box-sizing: border-box;
+	font-weight: bold;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+.container .content form button:hover {
+	background-color: #0062cc;
+}
+
+.container .content form p {
+	display: grid;
+	grid-template-columns: 50px auto;
+	grid-template-rows: 1fr;
+	margin: 0;
+	padding:0;
+	
+}
+.container .content form p input[type="checkbox"] {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+.container .content form p i {
+	background-color: #007bff;
+	color: white;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+}
+.container .footer {
+	box-sizing: border-box;
+	background-color: #fff;
+	color: #666;
+	display: grid;
+	grid-area: footer;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 0;
+	font-size: 16px;
+}
+
+::focus {
+	border: none;
+}
